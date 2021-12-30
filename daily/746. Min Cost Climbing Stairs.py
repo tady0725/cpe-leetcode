@@ -20,6 +20,7 @@ class Solution:
 
     # 4. transfer condition  - range -> [2,n+1) -> ==[2,n]  , find the transfer fountion came from below
         for i in range(2, n + 1):
+            # 一次走一步或兩步 選擇花費較低的成本
             dp[i] = min(dp[i - 1] + cost[i - 1], dp[i - 2] + cost[i - 2])
 
     # 5. end/ return condition
